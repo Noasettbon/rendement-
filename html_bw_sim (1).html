@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Rendement Taux Quotidien 2026 — Patrimy</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;padding:0 1rem 3rem}
+.wrap{max-width:720px;margin:0 auto}
+
+/* NAV — toujours dark */
+nav{position:sticky;top:0;z-index:10;background:rgba(13,13,13,.96);border-bottom:0.5px solid #2a2a2a;display:flex;gap:4px;padding:10px 0;margin-bottom:0;flex-wrap:wrap;align-items:center}
+.nav-brand{display:flex;align-items:center;gap:8px;margin-right:12px}
+.nav-dot{width:8px;height:8px;border-radius:50%;background:#00b894}
+.nav-name{font-size:12px;font-weight:600;letter-spacing:.05em;color:#fff}
+.nav-btn{padding:5px 11px;font-size:12px;border-radius:6px;border:0.5px solid transparent;background:transparent;color:#999;cursor:pointer;transition:all .15s;font-family:inherit}
+.nav-btn.active{border-color:#00b894;background:#00b89420;color:#00b894;font-weight:600}
+
+/* COVER — dark */
+.cover{background:#0d0d0d;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:52px 60px}
+.cover-brand{display:flex;align-items:center;gap:10px;margin-bottom:60px}
+.cover-dot{width:10px;height:10px;border-radius:50%;background:#00b894}
+.cover-name{font-size:14px;font-weight:600;letter-spacing:.1em;color:#00b894}
+.cover-eyebrow{font-size:12px;color:#00b894;letter-spacing:.12em;font-weight:600;margin-bottom:16px}
+.cover-title{font-size:48px;font-weight:700;line-height:1.1;color:#fff;margin-bottom:20px}
+.cover-sub{font-size:16px;color:#999;line-height:1.6;max-width:500px;margin-bottom:40px}
+.cover-pills{display:flex;gap:10px;flex-wrap:wrap}
+.cover-pill{font-size:11px;font-weight:500;padding:5px 14px;border-radius:20px;background:#00b89420;color:#00d4a8;border:0.5px solid #00b89440}
+.cover-bottom{border-top:0.5px solid #2a2a2a;padding-top:24px;display:flex;justify-content:space-between}
+.cover-btxt{font-size:12px;color:#555}
+
+/* LIGHT SECTIONS */
+.light-section{background:#fff;padding:3rem 60px;border-bottom:0.5px solid #e8e8e0}
+.dark-section{background:#0d0d0d;padding:3rem 60px;border-bottom:0.5px solid #2a2a2a}
+
+section{scroll-margin-top:56px}
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem}
+.sn-dark{width:30px;height:30px;border-radius:50%;background:#00b89420;border:0.5px solid #00b89440;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#00b894;flex-shrink:0}
+.sn-light{width:30px;height:30px;border-radius:50%;background:#e8f8f4;border:0.5px solid #00b89450;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#007a63;flex-shrink:0}
+h2.dark{font-size:20px;font-weight:600;color:#fff}
+h2.light{font-size:20px;font-weight:600;color:#0d0d0d}
+.divider-dark{height:0.5px;background:#2a2a2a;margin:2rem 0}
+.divider-light{height:0.5px;background:#e8e8e0;margin:2rem 0}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:1.25rem}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:14px}
+
+/* DARK ELEMENTS */
+.card-dark{background:#161616;border:0.5px solid #2a2a2a;border-radius:12px;padding:1.1rem 1.25rem}
+.ci{font-size:20px;margin-bottom:8px}
+.ct-dark{font-size:13px;font-weight:600;color:#fff;margin-bottom:6px}
+.cb-dark{font-size:12px;color:#888;line-height:1.6}
+p.bt-dark{font-size:14px;color:#999;line-height:1.7;margin-bottom:1.25rem}
+p.bt-dark strong{color:#fff;font-weight:500}
+.cl-dark-g{background:#00b89418;border:0.5px solid #00b89440;border-radius:10px;padding:16px 20px;margin-bottom:1.25rem}
+.cl-dark-w{background:#f39c1212;border:0.5px solid #f39c1235;border-radius:10px;padding:16px 20px;margin-bottom:0}
+.clt-dark-g{font-size:13px;font-weight:600;color:#00b894;margin-bottom:4px}
+.clt-dark-w{font-size:13px;font-weight:600;color:#f5a623;margin-bottom:4px}
+.clb-dark{font-size:13px;color:#999;line-height:1.7}
+.clb-dark strong{color:#fff;font-weight:500}
+.mt-dark{background:#161616;border:0.5px solid #00b89440;border-radius:8px;padding:.85rem 1rem}
+.ml-dark{font-size:11px;color:#555;margin-bottom:4px}
+.mv-dark{font-size:18px;font-weight:600;color:#00b894}
+.ms-dark{font-size:11px;color:#555;margin-top:2px}
+.cw-dark{background:#161616;border:0.5px solid #2a2a2a;border-radius:12px;padding:20px;margin-bottom:1.25rem}
+.cwtit-dark{font-size:13px;font-weight:600;color:#fff;margin-bottom:14px}
+.li-dark{display:flex;align-items:center;gap:6px;font-size:11px;color:#888}
+.ll-dark{width:24px;height:2px;background:#00b894;border-radius:1px}
+.lb-dark{width:24px;height:8px;background:#00b89420;border:0.5px solid #00b89440;border-radius:2px}
+.src-dark{font-size:11px;color:#555;margin-top:8px}
+
+/* LIGHT ELEMENTS */
+.card-light{background:#f8f8f6;border:0.5px solid #e0e0d8;border-radius:12px;padding:1.1rem 1.25rem}
+.ct-light{font-size:13px;font-weight:600;color:#0d0d0d;margin-bottom:6px}
+.cb-light{font-size:12px;color:#666;line-height:1.6}
+p.bt-light{font-size:14px;color:#444;line-height:1.7;margin-bottom:1.25rem}
+p.bt-light strong{color:#0d0d0d;font-weight:500}
+.cl-light-g{background:#e8f8f4;border:0.5px solid #00b89450;border-radius:10px;padding:16px 20px;margin-bottom:1.25rem}
+.cl-light-w{background:#fef8ee;border:0.5px solid #f39c1250;border-radius:10px;padding:16px 20px;margin-bottom:0}
+.clt-light-g{font-size:13px;font-weight:600;color:#007a63;margin-bottom:4px}
+.clt-light-w{font-size:13px;font-weight:600;color:#b8720a;margin-bottom:4px}
+.clb-light{font-size:13px;color:#555;line-height:1.7}
+.clb-light strong{color:#0d0d0d;font-weight:500}
+.mt-light{background:#e8f8f4;border:0.5px solid #00b89450;border-radius:8px;padding:.85rem 1rem}
+.ml-light{font-size:11px;color:#777;margin-bottom:4px}
+.mv-light{font-size:18px;font-weight:600;color:#007a63}
+.ms-light{font-size:11px;color:#888;margin-top:2px}
+.cw-light{background:#f8f8f6;border:0.5px solid #e0e0d8;border-radius:12px;padding:20px;margin-bottom:1.25rem}
+.cwtit-light{font-size:13px;font-weight:600;color:#0d0d0d;margin-bottom:14px}
+.li-light{display:flex;align-items:center;gap:6px;font-size:11px;color:#666}
+.ll-light{width:24px;height:2px;background:#007a63;border-radius:1px}
+.lb-light{width:24px;height:8px;background:#e8f8f4;border:0.5px solid #00b89450;border-radius:2px}
+.src-light{font-size:11px;color:#999;margin-top:8px}
+
+/* SCENARIOS — dark section */
+.sc-g{border:1.5px solid #00b894;border-radius:12px;padding:1.25rem;margin-bottom:12px;background:#0d1a14}
+.sc-w{border:1.5px solid #f39c1240;border-radius:12px;padding:1.25rem;margin-bottom:12px;background:#1a1500}
+.sch{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.sct{font-size:16px;font-weight:700;color:#fff}
+.scd-g{text-align:center;padding:8px 14px;border-radius:8px;flex-shrink:0;background:#00b89420;border:0.5px solid #00b89440}
+.scd-w{text-align:center;padding:8px 14px;border-radius:8px;flex-shrink:0;background:#f39c1215;border:0.5px solid #f39c1240}
+.scdl-g{font-size:10px;color:#00b894}
+.scdl-w{font-size:10px;color:#f5a623}
+.scdv-g{font-size:20px;font-weight:700;color:#00b894}
+.scdv-w{font-size:20px;font-weight:700;color:#f5a623}
+.ic-d1{background:#0f1f17;border:0.5px solid #2a2a2a;border-radius:8px;padding:.85rem 1rem}
+.ic-d2{background:#1a1200;border:0.5px solid #2a2a2a;border-radius:8px;padding:.85rem 1rem}
+.icl{font-size:11px;color:#555;margin-bottom:5px}
+.icb{font-size:12px;color:#888;line-height:1.6}
+.icb strong{color:#fff;font-weight:500}
+.oc-g{background:#00b89418;border:0.5px solid #00b89440;border-radius:8px;padding:.75rem 1rem;display:flex;align-items:center;gap:8px;margin-top:10px}
+.oc-w{background:#f39c1212;border:0.5px solid #f39c1235;border-radius:8px;padding:.75rem 1rem;display:flex;align-items:center;gap:8px;margin-top:10px}
+.oca-g{font-size:16px;color:#00b894}
+.oca-w{font-size:16px;color:#f5a623}
+.oct-g{font-size:13px;font-weight:600;color:#00b894}
+.oct-w{font-size:13px;font-weight:600;color:#f5a623}
+.tl{display:flex;gap:4px;overflow-x:auto;margin-bottom:10px}
+.tls{flex:0 0 auto;min-width:44px;padding:8px 4px;border-radius:6px;text-align:center}
+.tls.a{background:#00b89420;border:0.5px solid #00b89440}
+.tls.c{background:#00b894;border:0.5px solid #00b894}
+.tls.i{background:#1a1a1a;border:0.5px solid #2a2a2a}
+.tlv{font-size:11px;font-weight:600}
+.tls.a .tlv{color:#00d4a8}.tls.c .tlv{color:#000}.tls.i .tlv{color:#555}
+.tlt{font-size:9px;margin-top:2px}
+.tls.a .tlt,.tls.i .tlt{color:#555}.tls.c .tlt{color:#000}
+.tld{flex:0 0 auto;min-width:32px;display:flex;align-items:center;justify-content:center;color:#555;font-size:12px}
+.kp{border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;background:#0d1a14;border:1.5px solid #00b894}
+.kpt{font-size:13px;font-weight:700;color:#00b894;margin-bottom:14px}
+.ki{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.ki:last-child{margin-bottom:0}
+.kd{width:6px;height:6px;border-radius:50%;background:#00b894;flex-shrink:0;margin-top:5px}
+.kt{font-size:12px;color:#888;line-height:1.6}
+.kt strong{color:#fff;font-weight:600}
+.bg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.bc{background:#111;border:0.5px solid #2a2a2a;border-radius:8px;padding:14px 16px}
+.btit{font-size:12px;font-weight:600;color:#f5a623;margin-bottom:5px}
+.bbd{font-size:11px;color:#888;line-height:1.6}
+.bbd strong{color:#fff;font-weight:600}
+.cob{background:#f39c1212;border:0.5px solid #f39c1240;border-radius:8px;padding:14px 16px;margin-bottom:14px}
+.cot{font-size:12px;font-weight:600;color:#f5a623;margin-bottom:10px}
+.coi{display:flex;gap:8px;margin-bottom:7px;align-items:flex-start}
+.cod{width:5px;height:5px;border-radius:50%;background:#f5a623;flex-shrink:0;margin-top:5px}
+.cob2{font-size:11px;color:#888;line-height:1.6}
+.cob2 strong{color:#f5a623;font-weight:600}
+.rb{background:#1a1200;border:0.5px solid #2a2a2a;border-radius:8px;padding:.85rem 1rem;margin-bottom:12px}
+.rbl{font-size:11px;color:#555;margin-bottom:5px}
+.rbb{font-size:12px;color:#888;line-height:1.7}
+.rbb strong{color:#fff;font-weight:500}
+/* SIMULATEUR */
+.sim{background:#161616;border:0.5px solid #2a2a2a;border-radius:12px;padding:1.25rem;margin-bottom:1.25rem}
+.simt{font-size:13px;font-weight:600;color:#fff;margin-bottom:14px}
+.simin{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.siml{font-size:12px;color:#999;display:block;margin-bottom:6px}
+.simf{display:flex;align-items:center;gap:8px}
+.simi{width:100%;background:#1a1a1a;border:0.5px solid #2a2a2a;border-radius:8px;padding:8px 12px;font-size:15px;font-weight:600;color:#fff;outline:none;font-family:inherit}
+.simi:focus{border-color:#00b894}
+.simu{font-size:13px;color:#999;flex-shrink:0}
+.simsl{display:flex;align-items:center;gap:8px}
+.simsl input{flex:1;accent-color:#00b894}
+.simslv{font-size:14px;font-weight:600;color:#fff;min-width:28px}
+.simr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.simri{background:#1a1a1a;border:0.5px solid #2a2a2a;border-radius:8px;padding:.85rem 1rem}
+.simrl{font-size:11px;color:#555;margin-bottom:3px}
+.simrv-g{font-size:18px;font-weight:700;color:#00b894}
+.simrv-w{font-size:18px;font-weight:700;color:#fff}
+.simn{font-size:11px;color:#555;margin-top:10px;line-height:1.6}
+/* CONTEXTE dark */
+.ctx{background:#0d1a14;border:0.5px solid #00b89440;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.ctxt{font-size:14px;font-weight:700;color:#00b894;margin-bottom:14px}
+.cxi{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
+.cxi:last-child{margin-bottom:0}
+.cxd{width:6px;height:6px;border-radius:50%;background:#00b894;flex-shrink:0;margin-top:5px}
+.cxt2{font-size:13px;color:#999;line-height:1.5}
+.cxt2 strong{color:#fff;font-weight:600}
+.rem-dark{background:#161616;border:0.5px solid #00b89440;border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.25rem}
+.rem-label{font-size:12px;color:#555;margin-bottom:8px;font-weight:500}
+.rem-vals{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.rem-il{font-size:11px;color:#555}
+.rem-iv-dark{font-size:22px;font-weight:700;color:#00b894}
+.rem-is{font-size:11px;color:#555;margin-top:2px}
+.rem-sep-dark{width:0.5px;background:#2a2a2a;align-self:stretch}
+.disc{background:#111;border:0.5px solid #2a2a2a;border-radius:10px;padding:1rem 1.25rem;font-size:11px;color:#555;line-height:1.7}
+.disc strong{color:#888}
+.pill-dark{font-size:11px;font-weight:500;padding:3px 10px;border-radius:4px;background:#00b89420;color:#00d4a8;border:0.5px solid #00b89440;display:inline-block;margin-bottom:8px}
+.pill-warn{font-size:11px;font-weight:500;padding:3px 10px;border-radius:4px;background:#f39c1215;color:#f5a623;border:0.5px solid #f39c1240;display:inline-block;margin-bottom:8px}
+input[type=range]{accent-color:#00b894}
+.cond-hl{background:#00b89420;border:0.5px solid #00b89440;border-radius:12px;padding:1.1rem 1.25rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <div class="nav-brand"><div class="nav-dot"></div><span class="nav-name">PATRIMY</span></div>
+  <button class="nav-btn active" onclick="goTo('macro',this)">Contexte</button>
+  <button class="nav-btn" onclick="goTo('opportunite',this)">Opportunité</button>
+  <button class="nav-btn" onclick="goTo('sousjacent',this)">Euribor 3M</button>
+  <button class="nav-btn" onclick="goTo('produit',this)">Le produit</button>
+  <button class="nav-btn" onclick="goTo('scenarios',this)">Scénarios</button>
+</nav>
+
+<!-- COVER dark -->
+<div class="cover">
+  <div>
+    <div class="cover-brand"><div class="cover-dot"></div><span class="cover-name">PATRIMY</span></div>
+    <div class="cover-eyebrow">PATRIMY × BNP PARIBAS</div>
+    <h1 class="cover-title">Rendement Taux<br>Quotidien 2026</h1>
+    <p class="cover-sub">Titre de créance · Euribor 3 mois · Capital garanti à l'échéance · Coupons de 1,75 %/trimestre</p>
+    <div class="cover-pills">
+      <span class="cover-pill">ISIN FR0014016812</span>
+      <span class="cover-pill">Souscription jusqu'au 30 juin 2026</span>
+      <span class="cover-pill">Capital garanti à l'échéance</span>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <span class="cover-btxt">Document à caractère promotionnel · Avril 2026</span>
+    <span class="cover-btxt">SILEX Finance · BNP Paribas Issuance B.V.</span>
+  </div>
+</div>
+
+<!-- 1 MACRO — light -->
+<div class="light-section">
+  <section id="macro">
+    <div class="sh"><div class="sn-light">1</div><h2 class="light">Le contexte macroéconomique</h2></div>
+    <p class="bt-light">L'environnement actuel est marqué par trois dynamiques simultanées qui maintiennent une incertitude durable sur les marchés financiers.</p>
+    <div class="g3">
+      <div class="card-light"><div class="ci">📈</div><div class="ct-light">Inflation : le choc structurel est absorbé</div><div class="cb-light">L'inflation post-covid — chaînes d'approvisionnement, demande refoulée, crise énergétique — est revenue proche de la cible BCE. Les tensions au Moyen-Orient font peser un risque inflationniste, mais de nature géopolitique et ponctuelle : un choc d'offre passager que les banques centrales traversent sans remonter leurs taux.</div></div>
+      <div class="card-light"><div class="ci">🌍</div><div class="ct-light">Tensions géopolitiques persistantes</div><div class="cb-light">Conflits en Ukraine et au Moyen-Orient, tensions commerciales sino-américaines, instabilité politique européenne — des facteurs qui maintiennent une incertitude durable et réduisent la visibilité des investisseurs.</div></div>
+      <div class="card-light"><div class="ci">🏦</div><div class="ct-light">Cycle de taux inédit</div><div class="cb-light">Après la remontée la plus rapide depuis 40 ans (0 %→4 % en 18 mois), la BCE amorce un cycle baissier dont le rythme reste incertain. Une nouvelle ère pour les placements taux.</div></div>
+    </div>
+    <div class="cl-light-g">
+      <div class="clt-light-g">Ce que cela implique pour vos placements</div>
+      <div class="clb-light">Cette incertitude crée une <strong>volatilité accrue sur les marchés de long terme</strong>. Elle renforce l'intérêt pour des solutions offrant de la visibilité sur le capital, avec un rendement ancré sur des indicateurs stables — comme les taux courts européens.</div>
+    </div>
+  </section>
+</div>
+
+<!-- 2 OPPORTUNITE — dark -->
+<div class="dark-section">
+  <section id="opportunite">
+    <div class="sh"><div class="sn-dark">2</div><h2 class="dark">Pourquoi c'est une opportunité aujourd'hui</h2></div>
+    <p class="bt-dark">Dans un environnement instable, les taux courts européens présentent une caractéristique rare : <strong>ils sont à la fois rémunérateurs et relativement prévisibles</strong>, sans s'exposer aux chocs qui affectent les marchés de long terme.</p>
+    <div class="g3" style="margin-bottom:1.25rem">
+      <div class="cl-dark-w"><div class="clt-dark-w">Marchés actions : volatilité accrue</div><div class="clb-dark">Les incertitudes géopolitiques génèrent des épisodes de correction brutaux. Une partie du portefeuille mérite d'être ancrée sur un actif dont le rendement ne dépend pas des marchés.</div></div>
+      <div class="cl-dark-w"><div class="clt-dark-w">Obligations longues : duration</div><div class="clb-dark">Une remontée inattendue des taux peut générer des moins-values importantes avant l'échéance. La sensibilité est forte sur les maturités longues.</div></div>
+      <div class="cl-dark-w"><div class="clt-dark-w">Fonds monétaires : décroissant</div><div class="clb-dark">Leur rendement va mécaniquement baisser au rythme des baisses BCE — sans possibilité de figer un niveau.</div></div>
+    </div>
+    <div class="cl-dark-g">
+      <div class="clt-dark-g">La proposition de valeur de ce produit</div>
+      <div class="clb-dark">Ce produit permet de <strong>capter le rendement des taux courts européens</strong> tant qu'ils restent dans une fourchette raisonnable (0,50 %–2,80 %), avec une <strong>garantie de capital à l'échéance</strong>. Une façon de profiter du contexte de taux avec une protection structurelle sur l'investissement initial.</div>
+    </div>
+  </section>
+</div>
+
+<!-- 3 EURIBOR — light -->
+<div class="light-section">
+  <section id="sousjacent">
+    <div class="sh"><div class="sn-light">3</div><h2 class="light">Le sous-jacent : Euribor 3 mois</h2></div>
+    <p class="bt-light">L'Euribor 3 mois est le taux auquel les grandes banques européennes se prêtent mutuellement des fonds à 3 mois. Publié chaque jour par l'EMMI, c'est l'un des baromètres les plus directs de la politique monétaire de la BCE.</p>
+    <div class="g3" style="margin-bottom:1.25rem">
+      <div class="mt-light"><div class="ml-light">Niveau actuel (avril 2026)</div><div class="mv-light">2,10 %</div></div>
+      <div class="mt-light"><div class="ml-light">Fourchette active du produit</div><div class="mv-light">0,50 %–2,80 %</div></div>
+      <div class="mt-light"><div class="ml-light">Dans la zone active ?</div><div class="mv-light">Oui</div><div class="ms-light">Loin des deux barrières</div></div>
+    </div>
+    <div class="cw-light">
+      <div class="cwtit-light">Historique Euribor 3 mois — 2014 à avril 2026</div>
+      <svg id="chart" width="100%" viewBox="0 0 620 200" style="overflow:visible"></svg>
+      <div style="display:flex;gap:16px;margin-top:12px;flex-wrap:wrap">
+        <div class="li-light"><div class="ll-light"></div><span>Euribor 3M</span></div>
+        <div class="li-light"><div class="lb-light"></div><span>Zone active du produit (0,50 %–2,80 %)</span></div>
+      </div>
+      <div class="src-light">Source : Bloomberg. Les niveaux passés ne préjugent pas des niveaux futurs.</div>
+    </div>
+    <div class="g2">
+      <div class="card-light"><div class="ct-light" style="color:#b8720a;font-size:12px;margin-bottom:6px">Ce qui fait monter l'Euribor 3M</div><div class="cb-light" style="line-height:1.8">Hausse des taux directeurs BCE<br>Tensions sur la liquidité bancaire<br>Résurgence inflationniste durable</div></div>
+      <div class="card-light"><div class="ct-light" style="color:#007a63;font-size:12px;margin-bottom:6px">Ce qui fait baisser l'Euribor 3M</div><div class="cb-light" style="line-height:1.8">Baisses des taux directeurs BCE<br>Détente sur les marchés monétaires<br>Ralentissement économique</div></div>
+    </div>
+  </section>
+</div>
+
+<!-- 4 PRODUIT — dark -->
+<div class="dark-section">
+  <section id="produit">
+    <div class="sh"><div class="sn-dark">4</div><h2 class="dark">Les conditions du produit</h2></div>
+    <p class="bt-dark">Chaque trimestre, le produit observe l'Euribor 3 mois jour par jour. Plus il reste dans la fourchette, plus les coupons s'accumulent — et vous sont versés en une seule fois lors du remboursement.</p>
+    <div class="g3" style="margin-bottom:14px">
+      <div class="card-dark"><div style="font-size:11px;color:#555;margin-bottom:4px">Émetteur</div><div style="font-size:14px;font-weight:600;color:#fff">BNP Paribas Issuance B.V.</div><div style="font-size:11px;color:#555;margin-top:3px">Garanti par BNP Paribas S.A. (S&P A+)</div></div>
+      <div class="card-dark"><div style="font-size:11px;color:#555;margin-bottom:4px">Sous-jacent</div><div style="font-size:14px;font-weight:600;color:#fff">Euribor 3 mois</div><div style="font-size:11px;color:#555;margin-top:3px">Observé chaque jour de bourse</div></div>
+      <div class="card-dark"><div style="font-size:11px;color:#555;margin-bottom:4px">Coupon trimestriel</div><div style="font-size:14px;font-weight:600;color:#fff">1,75 %</div><div style="font-size:11px;color:#555;margin-top:3px">Proratisé au nombre de jours dans la zone</div></div>
+    </div>
+    <div class="g3" style="margin-bottom:1.25rem">
+      <div class="cond-hl"><div style="font-size:11px;color:#00d4a8;opacity:.8;margin-bottom:4px">Fourchette de génération</div><div style="font-size:14px;font-weight:600;color:#00b894">0,50 % – 2,80 %</div><div style="font-size:11px;color:#00d4a8;opacity:.7;margin-top:3px">Euribor actuel : 2,10 % — bien dans la zone</div></div>
+      <div class="card-dark"><div style="font-size:11px;color:#555;margin-bottom:4px">Garantie de capital</div><div style="font-size:14px;font-weight:600;color:#fff">100 % à l'échéance</div><div style="font-size:11px;color:#555;margin-top:3px">Ou en cas de call émetteur</div></div>
+      <div class="card-dark"><div style="font-size:11px;color:#555;margin-bottom:4px">Durée maximale</div><div style="font-size:14px;font-weight:600;color:#fff">12 ans — juin 2038</div><div style="font-size:11px;color:#555;margin-top:3px">Call possible dès T4 (juin 2027)</div></div>
+    </div>
+    <div class="cl-dark-g" style="border-left:3px solid #00b894;border-radius:0 10px 10px 0;margin-bottom:1rem">
+      <div class="clt-dark-g">Un coupon validé chaque jour — pas une seule date à risque</div>
+      <div class="clb-dark">Vous ne dépendez pas d'une unique date d'observation. <strong>Chaque jour de bourse</strong> où l'Euribor 3M est dans la fourchette, un fragment de coupon est acquis et sécurisé. Avec l'Euribor à 2,10 %, loin des deux barrières, chaque jour qui passe valide un nouveau fragment. <strong>Le coupon plein de 1,75 % est le résultat attendu tant que ce contexte se maintient.</strong></div>
+    </div>
+    <div class="rem-dark">
+      <div class="rem-label">Rémunération — hors frais d'entrée et fiscalité</div>
+      <div class="rem-vals">
+        <div><div class="rem-il">Coupon trimestriel</div><div class="rem-iv-dark">1,75 %</div><div class="rem-is">par trimestre dans la fourchette</div></div>
+        <div class="rem-sep-dark"></div>
+        <div><div class="rem-il">En rythme annuel</div><div class="rem-iv-dark">7 %/an</div><div class="rem-is">si Euribor 3M dans la fourchette chaque jour</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- 5 SCENARIOS — dark -->
+<div class="dark-section">
+  <section id="scenarios">
+    <div class="sh"><div class="sn-dark">5</div><h2 class="dark">Les scénarios de rappel</h2></div>
+    <p class="bt-dark">C'est l'Émetteur qui décide de rappeler — mais cette décision suit une logique financière simple. <strong>BNP Paribas rappelle quand vous lui coûtez plus cher que ce qu'elle paye sur les marchés.</strong></p>
+    <div class="kp" style="margin-bottom:1.25rem">
+      <div class="kpt">L'essentiel : les barrières sont très loin du niveau actuel</div>
+      <div class="bg2">
+        <div class="bc"><div class="btit">Barrière basse : 0,50 %</div><div class="bbd">Nécessite <strong>−1,60 %</strong> supplémentaires — retour aux taux négatifs. Scénario de récession sévère non anticipé.</div></div>
+        <div class="bc"><div class="btit">Barrière haute : 2,80 %</div><div class="bbd">Nécessite <strong>+0,70 %</strong> supplémentaires — retournement complet du cycle BCE, à contre-courant des anticipations.</div></div>
+      </div>
+      <div class="cl-dark-g" style="margin-bottom:0"><div class="clb-dark"><strong>La quasi-totalité des anticipations de marché convergent vers un maintien de l'Euribor dans la fourchette.</strong> Les scénarios réalistes sont donc les scénarios de rappel rapide.</div></div>
+    </div>
+    <div class="sc-g">
+      <div class="sch">
+        <div><span class="pill-dark">Scénario 1 — Remboursement rapide · Contexte actuel</span><div class="sct">Les taux baissent (progressivement ou rapidement), l'Euribor reste dans la fourchette</div></div>
+        <div class="scd-g"><div class="scdl-g">Durée estimée</div><div class="scdv-g">1–2 ans</div></div>
+      </div>
+      <div class="g2">
+        <div class="ic-d1"><div class="icl">Ce qui se passe</div><div class="icb">La BCE continue de baisser ses taux. L'Euribor 3M recule depuis ~2,10 % mais reste au-dessus de 0,50 %. Les coupons s'accumulent pleinement chaque trimestre.</div></div>
+        <div class="ic-d1"><div class="icl">Pourquoi l'Émetteur rappelle vite</div><div class="icb">BNP Paribas vous verse 1,75 %/trimestre alors qu'elle peut emprunter de moins en moins cher. <strong>Plus les taux baissent, plus ce différentiel est coûteux — et plus le call est rapide.</strong></div></div>
+      </div>
+      <div style="font-size:11px;color:#555;margin-bottom:6px">Timeline — call activé à T4</div>
+      <div class="tl" id="tl1"></div>
+      <div class="oc-g"><span class="oca-g">→</span><span class="oct-g">100 % du capital + tous les coupons accumulés versés en une fois. Plus les taux baissent vite, plus le call est rapide.</span></div>
+    </div>
+    <div class="sc-g">
+      <div class="sch">
+        <div><span class="pill-dark">Scénario 2 — Remboursement à moyen terme</span><div class="sct">Les taux stagnent, l'Euribor reste stable dans la fourchette</div></div>
+        <div class="scd-g"><div class="scdl-g">Durée estimée</div><div class="scdv-g">2–4 ans</div></div>
+      </div>
+      <div class="g2">
+        <div class="ic-d1"><div class="icl">Ce qui se passe</div><div class="icb">La BCE marque une pause. L'Euribor 3M se stabilise autour de 2 %, bien dans la fourchette. Les coupons de 1,75 % s'accumulent régulièrement trimestre après trimestre.</div></div>
+        <div class="ic-d1"><div class="icl">Pourquoi l'Émetteur finit par rappeler</div><div class="icb">BNP Paribas verse 7 %/an brut sur ce produit. Dès qu'une opportunité de refinancement se présente, elle activera le call. <strong>Plus la stagnation dure, plus les coupons s'empilent pour vous.</strong></div></div>
+      </div>
+      <div class="g2" style="margin-bottom:0">
+        <div><div style="font-size:11px;color:#555;margin-bottom:6px">Timeline — call illustré à T8</div><div class="tl" id="tl2"></div></div>
+        <div><div style="font-size:11px;color:#555;margin-bottom:6px">Coupons accumulés</div><svg id="bar2" width="100%" viewBox="0 0 260 80"></svg></div>
+      </div>
+      <div class="oc-g"><span class="oca-g">→</span><span class="oct-g">100 % du capital + coupons pleins accumulés. Plus la stagnation dure, plus les coupons s'empilent.</span></div>
+    </div>
+    <div class="sc-w">
+      <div class="sch">
+        <div><span class="pill-warn">Scénario 3 — Hors consensus · Pour mémoire</span><div class="sct">Les taux remontent durablement au-dessus de 2,80 %</div></div>
+        <div class="scd-w"><div class="scdl-w">Durée estimée</div><div class="scdv-w">Jusqu'à 12 ans</div></div>
+      </div>
+      <div class="cob">
+        <div class="cot">Pourquoi ce scénario n'est pas le consensus à date</div>
+        <div class="coi"><div class="cod"></div><div class="cob2"><strong>La BCE est en cycle baissier engagé</strong> depuis 2024 — remonter nécessiterait un choc inflationniste majeur et durable, malgré les incertitudes géopolitiques persistantes.</div></div>
+        <div class="coi"><div class="cod"></div><div class="cob2"><strong>La croissance européenne reste fragile</strong> — la BCE a intérêt à maintenir des taux accommodants pour soutenir l'économie.</div></div>
+        <div class="coi"><div class="cod"></div><div class="cob2"><strong>Les marchés à terme ne projettent pas de hausse</strong> — baromètre le plus direct des anticipations collectives des opérateurs.</div></div>
+        <div class="coi"><div class="cod"></div><div class="cob2"><strong>+0,70 % supplémentaires requis</strong> depuis 2,10 % — possible en cas de choc pétrolier lié aux tensions au Moyen-Orient, mais non intégré dans le scénario central.</div></div>
+      </div>
+      <div class="g2">
+        <div class="ic-d2"><div class="icl">Ce qui se passerait</div><div class="icb">Choc forçant la BCE à remonter ses taux durablement. L'Euribor dépasse 2,80 % — le produit génère peu ou pas de coupon pendant cette période.</div></div>
+        <div class="ic-d2"><div class="icl">Mais même dans ce cas…</div><div class="icb">Les cycles de taux ne durent pas éternellement. Dès que l'Euribor redescend dans la fourchette, <strong>l'Émetteur retrouve une forte incitation à rappeler rapidement.</strong></div></div>
+      </div>
+      <div class="rb"><div class="rbl">La durée de 12 ans : un filet de sécurité, pas un horizon probable</div><div class="rbb">Même dans ce scénario adverse, l'histoire des taux montre que les cycles de hausse sont suivis de normalisations. <strong>Dès le retour de l'Euribor dans la fourchette, la logique de call reprend ses droits.</strong></div></div>
+      <div class="g2" style="margin-bottom:0">
+        <div><div style="font-size:11px;color:#555;margin-bottom:6px">Timeline — coupons actifs seulement en zone</div><div class="tl" id="tl3"></div></div>
+        <div><div style="font-size:11px;color:#555;margin-bottom:6px">Activité des coupons — partielle</div><svg id="bar3" width="100%" viewBox="0 0 260 80"></svg></div>
+      </div>
+      <div class="oc-w"><span class="oca-w">→</span><span class="oct-w">Capital garanti à l'échéance (2038) dans tous les cas. La maturité à 12 ans est le garde-fou ultime — pas le scénario central.</span></div>
+    </div>
+
+    <!-- SIMULATEUR -->
+    <div class="sim">
+      <div class="simt">Simulez votre gain</div>
+      <div class="simin">
+        <div>
+          <label class="siml">Montant investi</label>
+          <div class="simf">
+            <input class="simi" type="number" id="montant" min="1000" max="10000000" step="1000" value="10000" oninput="updateSim()">
+            <span class="simu">€</span>
+          </div>
+        </div>
+        <div>
+          <label class="siml">Trimestre de remboursement</label>
+          <div class="simsl">
+            <input type="range" min="4" max="48" step="1" value="4" id="trimestre" oninput="updateSim()">
+            <span class="simslv" id="trim-val">T4</span>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#555;margin-bottom:6px">Timeline simulée</div>
+      <div class="tl" id="tl-sim" style="margin-bottom:14px"></div>
+      <div class="simr">
+        <div class="simri"><div class="simrl">Durée</div><div class="simrv-w" id="sim-duree">1,0 an</div></div>
+        <div class="simri"><div class="simrl">Gain brut accumulé</div><div class="simrv-g" id="sim-gain">+700 €</div></div>
+        <div class="simri"><div class="simrl">Coupons accumulés</div><div class="simrv-g" id="sim-pct">7,00 %</div></div>
+      </div>
+      <div class="simn">Simulation en supposant que l'Euribor 3M reste dans la fourchette chaque jour ouvré — coupon plein à 1,75 %/trimestre. Hors fiscalité et frais d'entrée. La décision de rappel appartient exclusivement à l'Émetteur.</div>
+    </div>
+
+    <div class="ctx">
+      <div class="ctxt">Pourquoi la probabilité de call rapide est élevée aujourd'hui</div>
+      <div class="cxi"><div class="cxd"></div><div class="cxt2"><strong>Euribor 3M à 2,10 % (avril 2026)</strong> — bien centré dans la fourchette, à égale distance des deux barrières. Les coupons s'accumulent dès le lancement.</div></div>
+      <div class="cxi"><div class="cxd"></div><div class="cxt2"><strong>Les deux barrières sont loin</strong> — sortir par le bas nécessite −1,60 %, sortir par le haut nécessite +0,70 %. Aucun de ces scénarios n'est dans le consensus de marché.</div></div>
+      <div class="cxi"><div class="cxd"></div><div class="cxt2"><strong>Cycle BCE baissier engagé</strong> — le consensus anticipe un Euribor 3M entre 1,5 % et 2,5 % à horizon 2026–2027, toujours dans la fourchette, avec une pression croissante sur le différentiel de l'Émetteur.</div></div>
+      <div class="cxi"><div class="cxd"></div><div class="cxt2"><strong>Première fenêtre : juin 2027 (T4)</strong> — soit environ 1 an après le lancement. Dans le contexte actuel, c'est la date la plus probable de remboursement, avec l'ensemble des coupons accumulés versés en une fois.</div></div>
+    </div>
+
+    <div class="disc"><strong>Avertissement —</strong> Document à caractère promotionnel. Ne constitue pas un conseil en investissement. Le capital n'est garanti qu'à l'échéance (30 juin 2038) ou en cas de remboursement anticipé au gré de l'Émetteur. En cours de vie, une sortie expose à un risque de perte en capital non mesurable a priori. L'investisseur supporte le risque de défaut de l'Émetteur (BNP Paribas Issuance B.V.) et du Garant (BNP Paribas S.A.). Les performances passées ne préjugent pas des performances futures.</div>
+  </section>
+</div>
+
+</div>
+<script>
+const ns='http://www.w3.org/2000/svg';
+const G='#00b894',BG='#fff';
+const data=[
+  {y:'2014',v:0.24},{y:'2015',v:-0.01},{y:'2016',v:-0.26},{y:'2017',v:-0.33},
+  {y:'2018',v:-0.32},{y:'2019',v:-0.40},{y:'2020',v:-0.49},{y:'2021',v:-0.55},
+  {y:'2022',v:1.10},{y:'2023',v:3.90},{y:'2024',v:3.20},{y:'2025',v:2.40},
+  {y:'jan. 26',v:1.98},{y:'avr. 26',v:2.10}
+];
+const W=620,H=200,pad={t:24,b:32,l:40,r:60};
+const iw=W-pad.l-pad.r,ih=H-pad.t-pad.b;
+const mn=-0.8,mx=4.4;
+const ys=v=>pad.t+ih-((v-mn)/(mx-mn))*ih;
+const xs=i=>pad.l+(i/(data.length-1))*iw;
+function el(tag,attrs){const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));return e;}
+const svg=document.getElementById('chart');
+const defs=el('defs',{});
+const lg=el('linearGradient',{id:'lg',x1:'0',y1:'0',x2:'0',y2:'1'});
+lg.appendChild(el('stop',{'offset':'0%','stop-color':G,'stop-opacity':'0.18'}));
+lg.appendChild(el('stop',{'offset':'100%','stop-color':G,'stop-opacity':'0'}));
+defs.appendChild(lg);svg.appendChild(defs);
+[-0.5,0,0.5,1,1.5,2,2.5,3,3.5,4].forEach(t=>{
+  svg.appendChild(el('line',{x1:pad.l,x2:pad.l+iw,y1:ys(t),y2:ys(t),stroke:'#e0e0d8','stroke-width':'0.5'}));
+  const tx=el('text',{x:pad.l-6,y:ys(t),'text-anchor':'end','dominant-baseline':'central','font-size':'9',fill:'#aaa'});
+  tx.textContent=t.toFixed(1);svg.appendChild(tx);
+});
+const z0=ys(2.80),z1=ys(0.50);
+svg.appendChild(el('rect',{x:pad.l,y:z0,width:iw,height:z1-z0,fill:G,opacity:'0.08'}));
+[{y:z0,v:'2,80 %'},{y:z1,v:'0,50 %'}].forEach(({y,v})=>{
+  svg.appendChild(el('line',{x1:pad.l,x2:pad.l+iw,y1:y,y2:y,stroke:G,'stroke-width':'0.8','stroke-dasharray':'5 4',opacity:'0.6'}));
+  const tx=el('text',{x:pad.l+iw+6,y:y,'dominant-baseline':'central','font-size':'9',fill:'#007a63'});
+  tx.textContent=v;svg.appendChild(tx);
+});
+const ztx=el('text',{x:pad.l+iw/2,y:(z0+z1)/2,'text-anchor':'middle','dominant-baseline':'central','font-size':'9',fill:'#007a63',opacity:'0.6'});
+ztx.textContent='Zone active';svg.appendChild(ztx);
+const apts=`${xs(0)},${ys(mn)} `+data.map((d,i)=>`${xs(i)},${ys(d.v)}`).join(' ')+` ${xs(data.length-1)},${ys(mn)}`;
+svg.appendChild(el('polygon',{points:apts,fill:'url(#lg)'}));
+svg.appendChild(el('polyline',{points:data.map((d,i)=>`${xs(i)},${ys(d.v)}`).join(' '),fill:'none',stroke:'#007a63','stroke-width':'1.8','stroke-linejoin':'round'}));
+let hov=null;
+data.forEach((d,i)=>{
+  const isLast=i===data.length-1;
+  const cx=xs(i),cy=ys(d.v);
+  const g=el('g',{style:'cursor:pointer'});
+  const hit=el('circle',{cx,cy,r:'10',fill:'transparent'});
+  const dot=el('circle',{cx,cy,r:isLast?'5':'2.5',fill:'#007a63',stroke:BG,'stroke-width':'1.5'});
+  g.appendChild(hit);g.appendChild(dot);
+  if(isLast){
+    const bg=el('rect',{x:cx-38,y:cy-26,width:'76',height:'18',rx:'4',fill:'#007a63'});
+    const tx=el('text',{x:cx,y:cy-15,'text-anchor':'middle','font-size':'10',fill:'#fff','font-weight':'600'});
+    tx.textContent='Actuel 2,10 %';g.appendChild(bg);g.appendChild(tx);
+  }
+  if(i%2===0||isLast){
+    const lx=el('text',{x:cx,y:H-4,'text-anchor':'middle','font-size':'9',fill:'#aaa'});
+    lx.textContent=d.y;g.appendChild(lx);
+  }
+  g.addEventListener('mouseenter',()=>{
+    dot.setAttribute('r','4');dot.setAttribute('fill','#0d0d0d');
+    if(!isLast){
+      if(hov)svg.removeChild(hov);
+      hov=el('g',{});
+      const bg=el('rect',{x:cx-30,y:cy-28,width:'60',height:'20',rx:'4',fill:'#f8f8f6',stroke:'#e0e0d8'});
+      const tx=el('text',{x:cx,y:cy-15,'text-anchor':'middle','font-size':'10',fill:'#0d0d0d','font-weight':'500'});
+      tx.textContent=d.v.toFixed(2)+' %';hov.appendChild(bg);hov.appendChild(tx);svg.appendChild(hov);
+    }
+  });
+  g.addEventListener('mouseleave',()=>{
+    dot.setAttribute('r',isLast?'5':'2.5');dot.setAttribute('fill','#007a63');
+    if(hov){svg.removeChild(hov);hov=null;}
+  });
+  svg.appendChild(g);
+});
+function buildTL(id,quarters,inZone,callAt){
+  const c=document.getElementById(id);c.innerHTML='';
+  const show=Math.min(quarters,10);
+  for(let k=1;k<=show;k++){
+    const isCall=k===callAt,active=inZone(k);
+    const s=document.createElement('div');
+    s.className='tls '+(isCall?'c':active?'a':'i');
+    s.innerHTML=`<div class="tlv">${isCall?'CALL':active?'1,75%':'0%'}</div><div class="tlt">T${k}</div>`;
+    c.appendChild(s);
+  }
+  if(quarters>10){
+    const d=document.createElement('div');d.className='tld';d.textContent='···';c.appendChild(d);
+    const l=document.createElement('div');l.className='tls c';
+    l.innerHTML=`<div class="tlv">CALL</div><div class="tlt">T${quarters}</div>`;c.appendChild(l);
+  }
+}
+function buildBar(id,quarters,inZone){
+  const svg=document.getElementById(id);
+  const W=260,H=80,pt={t:8,b:20,l:8,r:8};
+  const iw=W-pt.l-pt.r,ih=H-pt.t-pt.b;
+  const bw=Math.min(18,(iw/quarters)-2);
+  const xs=n=>pt.l+(n/quarters)*iw+bw/2;
+  svg.innerHTML='';
+  const ln=document.createElementNS(ns,'line');
+  ln.setAttribute('x1',pt.l);ln.setAttribute('x2',pt.l+iw);
+  ln.setAttribute('y1',pt.t+ih);ln.setAttribute('y2',pt.t+ih);
+  ln.setAttribute('stroke','#e0e0d8');ln.setAttribute('stroke-width','0.5');svg.appendChild(ln);
+  for(let n=0;n<quarters;n++){
+    const active=inZone(n+1);
+    const bh=active?ih*0.85:ih*0.2;
+    const r=document.createElementNS(ns,'rect');
+    r.setAttribute('x',xs(n)-bw/2);r.setAttribute('y',pt.t+ih-bh);
+    r.setAttribute('width',bw);r.setAttribute('height',bh);r.setAttribute('rx','2');
+    r.setAttribute('fill',active?'#007a63':'#e0e0d8');r.setAttribute('opacity',active?'0.85':'0.5');
+    svg.appendChild(r);
+  }
+}
+buildTL('tl1',4,()=>true,4);
+buildTL('tl2',8,()=>true,8);
+buildBar('bar2',8,()=>true);
+buildTL('tl3',12,k=>k>=5&&k<=8,null);
+buildBar('bar3',12,k=>k>=5&&k<=8);
+function updateSim(){
+  const t=parseInt(document.getElementById('trimestre').value);
+  const m=Math.max(1000,parseInt(document.getElementById('montant').value)||10000);
+  document.getElementById('trim-val').textContent='T'+t;
+  const yrs=(t/4).toFixed(1);
+  const pct=(t*1.75).toFixed(2);
+  const gain=Math.round(t*1.75*m/100);
+  document.getElementById('sim-duree').textContent=yrs+' an'+(parseFloat(yrs)>1?'s':'');
+  document.getElementById('sim-gain').textContent='+'+gain.toLocaleString('fr-FR')+' €';
+  document.getElementById('sim-pct').textContent=pct+' %';
+  buildTL('tl-sim',t,()=>true,t);
+}
+updateSim();
+function goTo(id,btn){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      document.querySelectorAll('.nav-btn').forEach(b=>{
+        b.classList.toggle('active',b.getAttribute('onclick').includes("'"+id+"'"));
+      });
+    }
+  });
+},{threshold:0.25});
+['macro','opportunite','sousjacent','produit','scenarios'].forEach(id=>{
+  const el=document.getElementById(id);if(el)obs.observe(el);
+});
+</script>
+</body>
+</html>
